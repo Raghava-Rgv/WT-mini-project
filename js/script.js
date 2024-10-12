@@ -88,6 +88,6 @@ document.getElementById("findTrainers").addEventListener("click", function() {
             resultsDiv.appendChild(trainerDiv);
         });
     } else {
-        resultsDiv.innerHTML = "<p>No trainers found in your area.</p>";
+        resultsDiv.innerHTML = "<p>Too Long from your Current Location</p>";
     }
 });
