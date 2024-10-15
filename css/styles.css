@@ -7,75 +7,73 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #f0f0f5 0%, #cce2f7 100%);
+    background: linear-gradient(135deg, #f8fafc 0%, #dfe7f0 100%);
     color: #333;
 }
 
 /* Navbar */
 header nav {
-    background: #2e8b57;
+    background: linear-gradient(135deg, #11998e, #38ef7d);
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-header nav h1 {
-    font-size: 1.8em;
-    letter-spacing: 1px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    font-size: 1.1em;
 }
 
 .auth-options .btn {
     color: white;
-    background: #444;
+    background: #2c3e50;
     padding: 8px 15px;
-    border-radius: 5px;
+    border-radius: 8px;
     text-decoration: none;
     margin-left: 10px;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .auth-options .btn:hover {
-    background: #555;
+    background: #34495e;
+    transform: scale(1.05);
 }
 
 /* Search Section */
 .search-section {
-    max-width: 600px;
+    max-width: 700px;
     margin: 40px auto;
-    padding: 30px;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 .search-section h2 {
     font-size: 1.8em;
-    color: #2e8b57;
+    color: #34495e;
 }
 
-input[type="text"] {
+#search-bar {
     width: 70%;
     padding: 12px;
     margin: 15px 0;
     border: 2px solid #ddd;
     border-radius: 8px;
     font-size: 1em;
-    transition: border 0.3s;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-input[type="text"]:focus {
-    border-color: #2e8b57;
+#search-bar:focus {
+    border-color: #34495e;
+    box-shadow: 0 0 10px rgba(50, 50, 93, 0.3);
     outline: none;
 }
 
 button {
-    background: #2e8b57;
+    background: #34495e;
     color: white;
-    padding: 12px 18px;
+    padding: 12px 20px;
     border: none;
     border-radius: 8px;
     font-size: 1em;
@@ -84,7 +82,7 @@ button {
 }
 
 button:hover {
-    background: #276b46;
+    background: #2c3e50;
     transform: translateY(-2px);
 }
 
@@ -96,17 +94,17 @@ button:hover {
 }
 
 .trainer {
-    background: #f9f9f9;
+    background: #eaf0f8;
     padding: 20px;
     margin: 15px 0;
-    border-left: 6px solid #2e8b57;
+    border-left: 6px solid #11998e;
     border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     animation: fadeInUp 0.4s ease-out both;
 }
 
 .trainer h1 {
-    color: #2e8b57;
+    color: #34495e;
     font-size: 1.5em;
 }
 
@@ -120,14 +118,14 @@ button:hover {
 .faqs {
     max-width: 600px;
     margin: 40px auto;
-    background: #f3f3f9;
+    background: #f3f6fa;
     padding: 25px;
-    border-radius: 12px;
+    border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .faqs h2 {
-    color: #2e8b57;
+    color: #34495e;
     font-size: 1.6em;
     margin-bottom: 20px;
 }
@@ -135,9 +133,9 @@ button:hover {
 .faqs details summary {
     font-weight: bold;
     cursor: pointer;
-    color: #333;
-    padding: 10px;
-    border-radius: 5px;
+    color: #34495e;
+    padding: 12px;
+    border-radius: 8px;
     background: #ddd;
     transition: background 0.3s;
 }
@@ -148,7 +146,7 @@ button:hover {
 
 /* Footer */
 footer {
-    background: #333;
+    background: #2c3e50;
     color: white;
     padding: 20px;
     text-align: center;
@@ -160,14 +158,14 @@ footer p {
 }
 
 footer a {
-    color: #2e8b57;
+    color: #38ef7d;
     text-decoration: none;
     margin: 0 5px;
     transition: color 0.3s;
 }
 
 footer a:hover {
-    color: #44b782;
+    color: #b8e994;
 }
 
 /* Animations */
