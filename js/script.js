@@ -1,31 +1,31 @@
-const trainingCenters = [
-    // Add sample data here
+const trainers = [
+    { name: "John Doe", specialty: "Strength Training", bio: "Experienced in powerlifting and hypertrophy training." },
+    { name: "Jane Smith", specialty: "Yoga", bio: "Certified yoga instructor with 10 years of experience." },
+    { name: "Alex Johnson", specialty: "HIIT", bio: "Specializes in high-intensity interval training and cardio." },
+    { name: "Maria Garcia", specialty: "Pilates", bio: "Expert in Pilates and core strengthening." }
 ];
 
-document.getElementById("findTrainers").addEventListener("click", function() {
-    const locationInput = document.getElementById("location").value.toLowerCase();
-    const resultsDiv = document.getElementById("results");
-    resultsDiv.innerHTML = "";
-
-    const filteredTrainers = trainingCenters.filter(trainer =>
-        trainer.location.toLowerCase().includes(locationInput)
+function renderTrainers(filter = "") {
+    const resultsContainer = document.getElementById("results");
+    resultsContainer.innerHTML = "";
+    const filteredTrainers = trainers.filter(trainer => 
+        trainer.name.toLowerCase().includes(filter.toLowerCase())
     );
+    filteredTrainers.forEach(trainer => {
+        const trainerElement = document.createElement("div");
+        trainerElement.classList.add("trainer");
+        trainerElement.innerHTML = `
+            <h1>${trainer.name}</h1>
+            <p><strong>Specialty:</strong> ${trainer.specialty}</p>
+            <p>${trainer.bio}</p>
+        `;
+        resultsContainer.appendChild(trainerElement);
+    });
+}
 
-    if (filteredTrainers.length > 0) {
-        filteredTrainers.forEach(trainer => {
-            const trainerDiv = document.createElement("div");
-            trainerDiv.className = "trainer";
-            trainerDiv.innerHTML = `
-                <h1>${trainer.centerName}</h1>
-                <p><strong>Specialty:</strong> ${trainer.specialty}</p>
-                <p><strong>Location:</strong> ${trainer.location}</p>
-                <p><strong>Contact:</strong> ${trainer.mobileNumber}</p>
-                <p><strong>Available Timings:</strong> ${trainer.availableTimings}</p>
-                <p><strong>Training Fee:</strong> ${trainer.trainingFee}</p>
-            `;
-            resultsDiv.appendChild(trainerDiv);
-        });
-    } else {
-        resultsDiv.innerHTML = "<p>No trainers available in your location.</p>";
-    }
+document.getElementById("search-bar").addEventListener("input", event => {
+    renderTrainers(event.target.value);
 });
+
+// Initial render of all trainers
+renderTrainers();
