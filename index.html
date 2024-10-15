@@ -3,16 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finding Trainers near You</title>
+    <title>Find Trainers Near You</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <header>
+        <div class="navbar">
+            <a href="#">Home</a>
+            <a href="#trainers">Trainers</a>
+            <a href="#locations">Locations</a>
+            <a href="#faqs">FAQs</a>
+            <a href="#contact">Contact</a>
+            <button id="signinBtn">Sign In</button>
+            <button id="signupBtn">Sign Up</button>
+        </div>
+    </header>
+    
     <div class="container">
         <h1><b>Search Trainers by Location</b></h1>
         <input type="text" id="location" placeholder="Enter your location" />
         <button id="findTrainers">Find Trainers</button>
         <div id="results"></div>
     </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="#" target="_blank">Facebook</a>
+            <a href="#" target="_blank">Twitter</a>
+            <a href="#" target="_blank">Instagram</a>
+            <a href="#" target="_blank">LinkedIn</a>
+        </div>
+        <p>&copy; 2024 Find Trainers</p>
+    </footer>
+
     <script src="js/script.js"></script>
 </body>
 </html>
