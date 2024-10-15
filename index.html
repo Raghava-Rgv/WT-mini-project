@@ -3,53 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finding Trainers near You</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Trainer Finder</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navbar with Sign-In/Sign-Up Options -->
+    <!-- Navbar -->
     <header>
         <nav>
-            <h1>Trainer Finder</h1>
+            <h1>Find Your Trainer</h1>
             <div class="auth-options">
-                <a href="#signin" class="btn">Sign In</a>
-                <a href="#signup" class="btn">Sign Up</a>
+                <a href="#" class="btn">Login</a>
+                <a href="#" class="btn">Sign Up</a>
             </div>
         </nav>
     </header>
 
     <!-- Search Section -->
     <section class="search-section">
-        <h2>Search Trainers by Location</h2>
-        <input type="text" id="location" placeholder="Enter your location" />
-        <button id="findTrainers">Find Trainers</button>
+        <h2>Search for a Trainer</h2>
+        <input type="text" id="search-bar" placeholder="Type a trainer's name...">
+        <button id="search-btn">Search</button>
     </section>
 
     <!-- Results Section -->
-    <section id="results" class="results"></section>
+    <section class="results" id="results">
+        <!-- Trainer items will be injected here by JavaScript -->
+    </section>
 
-    <!-- FAQs Section -->
+    <!-- FAQs -->
     <section class="faqs">
         <h2>Frequently Asked Questions</h2>
         <details>
-            <summary>What are the available training programs?</summary>
-            <p>We offer a variety of programs, including fitness, coding, yoga, and martial arts.</p>
+            <summary>How can I contact a trainer?</summary>
+            <p>Each trainer profile includes contact information and social links.</p>
         </details>
         <details>
-            <summary>How do I sign up?</summary>
-            <p>Click on 'Sign Up' at the top of the page and follow the instructions.</p>
+            <summary>Can I request a custom training plan?</summary>
+            <p>Yes, trainers often offer personalized plans based on your fitness goals.</p>
         </details>
     </section>
 
-    <!-- Footer with Social Media Links -->
+    <!-- Footer -->
     <footer>
-        <p>Connect with us:</p>
-        <a href="https://facebook.com" target="_blank">Facebook</a> |
-        <a href="https://twitter.com" target="_blank">Twitter</a> |
-        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <p>&copy; 2024 Trainer Finder. All Rights Reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
